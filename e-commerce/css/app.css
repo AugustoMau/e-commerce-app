@@ -1,0 +1,379 @@
+/*DEFAULT*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*1 REM = 10 PX*/
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2; /*interlineado*/
+}
+
+h1, h2, h3{
+    font-family: 'Bebas Neue', cursive; 
+    margin: 0 0 5rem 0;
+}
+
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.btn{
+    background-color: #8cbc00;
+    display: block;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+    border: none;
+}
+
+.btn:hover{
+    background-color: #709405;
+    cursor: pointer;
+}
+
+/*UTILIDADES*/
+.text-center{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.max-width-30{
+    max-width: 30rem;
+}
+
+/*HEADER Y NAV*/
+.nombre-sitio{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span{
+    color: #037bc0;
+}
+
+.container-nav{
+    border-top: .1rem solid #e2e2e2;
+}
+
+.nav-header{
+    margin: auto 10rem;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-header a:hover{
+    color: #037bc0;
+    transform: scale(1.300);
+    transition-duration: .4s;
+}
+
+.top-img{
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}   
+
+/*CATEGORIAS*/
+.categorias{
+    padding-top: 5rem;
+}
+
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+    transition: background-color .4s ease-out;
+}
+
+.categoria a:hover{
+    background-color: #037bc0;
+    color: #fff;
+    border-bottom-right-radius: 1rem;
+}
+
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/*SOBRE NOSOTROS*/
+
+.sobre-nosotros{  
+    margin-top: 5rem;                  /*DIRECCION,    COLOR IZQ,    COLOR DERECHO*/
+    background-image: linear-gradient( to right, transparent 50%, #037bc0 50%, #037bc0 100%), /*DEGRADADO LINEAL*/
+    url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 100rem;
+    object-fit: cover;
+}
+
+.sobre-nosotros-flex{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.texto-nosotros{
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: #FFF;
+}
+
+/*NUESTROS PRODUCTOS*/
+
+.contenido-principal{
+    padding-top: 5rem;
+}
+
+.listado-productos{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+.producto:nth-child(1){ /*:nth-child() selecciona el elemento que le indicamos dentro del parentesis, de la clase producto*/
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.producto:nth-child(1) img{
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.producto:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.producto:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.producto:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.producto{
+    background-color: #037bc0;
+}
+
+.texto-producto{
+    text-align: center;
+    color: #FFF;
+    padding: 2rem;
+}
+.texto-producto h3{
+    margin: 0;
+}
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+/*FOOTER*/
+
+.site-footer{
+    border-top: .1rem solid #e2e2e2;
+    border-bottom: .1rem solid #e2e2e2;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+.site-footer h3{
+    margin-bottom: .2rem;
+}
+
+.cat-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav-footer a{
+    display: block;
+}
+
+.nav-footer a:hover{
+    color: #037bc0;
+    transform: scale(1.300);
+    transition-duration: .4s;
+}
+
+.p-footer{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/*PAGINA NOSOTROS*/
+
+.content-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /*PROPIEDADES RESPONSIVE*/
+    gap: 2rem;
+}
+
+.text-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*PAGINA TIENDA*/
+
+/*PAGINA BLOG*/
+
+.container-blog{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.text-img{
+    display: flex;
+    justify-content: space-between;
+}
+.text-img p{
+    font-weight: 700;
+}
+.text-img span{
+    color: #037bc0;
+}
+
+.entrada-blog{
+    border-bottom: .2rem solid #e2e2e2;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+.entrada:last-of-type{/*last-of-type va a buscar la ultima de las clases para modificarla*/
+    border: none;
+}
+
+.blog-btn{
+        background-color: #8cbc00;
+        display: block;
+        color: #FFF;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding: 1rem;
+        transition: background-color .3s ease-out;
+        text-align: center;
+        margin: 0 auto;
+}
+
+.blog-btn:hover{
+    background-color: #709405;
+}
+
+.container-entrada{
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/*GALERIA*/
+
+.galeria{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img{
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/*FORMULARIO*/
+
+.formulario{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.formulario fieldset{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+.formulario legend{
+    background-color: #005495;
+    width: 100%;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label{
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select{
+    flex: 1;
+    border: 1px solid #e2e2e2;
+    padding: 1rem;
+}
